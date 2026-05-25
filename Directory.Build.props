@@ -1,14 +1,10 @@
 <Project>
-  
-    <PropertyGroup>
-    <NovolisGitHubRepository>novolis-template-dotnet</NovolisGitHubRepository>
+
+  <PropertyGroup>
+    <NovolisGitHubRepository>novolis-gaming</NovolisGitHubRepository>
   </PropertyGroup>
   <Import Project="$(MSBuildThisFileDirectory)build\version.props"
           Condition="Exists('$(MSBuildThisFileDirectory)build\version.props')" />
-<PropertyGroup Label="Local NuGet feed">
-    <NovolisLocalFeed Condition="'$(NovolisLocalFeed)' == ''">$(NOVOLIS_LOCAL_FEED)</NovolisLocalFeed>
-    <NovolisLocalFeed Condition="'$(NovolisLocalFeed)' == ''">$(MSBuildThisFileDirectory)..\artifacts\nuget-local</NovolisLocalFeed>
-  </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <LangVersion>latest</LangVersion>
@@ -32,10 +28,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.LocalPack.props"
+          Condition="Exists('$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.LocalPack.props')" />
   <Import Project="$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.GitHubPackages.props"
           Condition="Exists('$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.GitHubPackages.props')" />
-  <Import Project="$(MSBuildThisFileDirectory)build\Novolis.Documentation.props"
-          Condition="Exists('$(MSBuildThisFileDirectory)build\Novolis.Documentation.props')" />
-  <Import Project="$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.PackageReadme.props"
-          Condition="Exists('$(MSBuildThisFileDirectory)..\novolis-governance\build\Novolis.PackageReadme.props')" />
 </Project>

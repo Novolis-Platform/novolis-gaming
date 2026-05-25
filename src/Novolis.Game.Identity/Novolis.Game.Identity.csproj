@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Identity</PackageId>
+    <Description>In-memory pseudonymous player directory and external identity linker.</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.Identity</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

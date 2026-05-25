@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Packaging.Inno</PackageId>
+    <Description>Inno Setup script generation helpers for Windows game installers.</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.Packaging.Inno</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="build\Novolis.Game.Packaging.Inno.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

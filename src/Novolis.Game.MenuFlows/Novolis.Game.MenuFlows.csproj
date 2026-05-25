@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.MenuFlows</PackageId>
+    <Description>UI-agnostic game screen stack and menu navigation.</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.MenuFlows</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

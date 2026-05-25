@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Identity.Abstractions</PackageId>
+    <Description>Pseudonymous player identity refs for games (no PII in platform API).</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.Identity.Abstractions</RootNamespace>
+  </PropertyGroup>
+</Project>

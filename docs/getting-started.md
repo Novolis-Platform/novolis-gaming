@@ -1,14 +1,28 @@
 # Getting started
 
-Repository scaffold from [novolis-template-dotnet](https://github.com/Novolis-Platform/novolis-template-dotnet).
+## Prerequisites
 
-## Documentation defaults
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- GitHub Packages auth for `Novolis.*` (see [novolis-governance nuget setup](https://github.com/Novolis-Platform/novolis-governance/blob/main/docs/nuget-setup.md))
 
-New packable projects should:
+## Clone and build
 
-1. Import `build/Novolis.Documentation.props` (or a repo-specific `build/*.Documentation.props` that imports [Novolis.Documentation.props](https://github.com/Novolis-Platform/novolis-governance/blob/main/build/Novolis.Documentation.props)).
-2. Add `README.md` next to each packable `.csproj` and set `PackageReadmeFile`.
-3. Document all public API with XML comments before removing transitional `CS1591` suppressions.
+```bash
+git clone https://github.com/Novolis-Platform/novolis-gaming.git
+cd novolis-gaming
+dotnet restore
+dotnet build Novolis.Gaming.slnx
+dotnet test tests/Novolis.Gaming.Unit
+```
 
-See [documentation-policy.md](https://github.com/Novolis-Platform/novolis-governance/blob/main/docs/documentation-policy.md).
+## Consume from GPR
 
+```bash
+dotnet add package Novolis.Game.Identity.Abstractions --version 2026.1.*
+```
+
+Restore uses `nuget.org` + `https://nuget.pkg.github.com/Novolis-Platform/index.json` only.
+
+## Sibling checkout
+
+When cloned under `d:\novolis\` next to `novolis-governance`, MSBuild imports documentation and GPR props automatically. Cross-repo references remain **PackageReference** only in consumers.

@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Novolis.Game.Identity.Abstractions/Novolis.Game.Identity.Abstractions.csproj" />
+    <Project Path="src/Novolis.Game.Identity/Novolis.Game.Identity.csproj" />
+    <Project Path="src/Novolis.Game.Identity.AspNetCore/Novolis.Game.Identity.AspNetCore.csproj" />
+    <Project Path="src/Novolis.Game.MenuFlows/Novolis.Game.MenuFlows.csproj" />
+    <Project Path="src/Novolis.Game.Packaging.Inno/Novolis.Game.Packaging.Inno.csproj" />
+    <Project Path="src/Novolis.Game.Multiplayer.Abstractions/Novolis.Game.Multiplayer.Abstractions.csproj" />
+    <Project Path="src/Novolis.Game.Multiplayer.AspNetCore/Novolis.Game.Multiplayer.AspNetCore.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Novolis.Gaming.Unit/Novolis.Gaming.Unit.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <NovolisInnoAppName Condition="'$(NovolisInnoAppName)' == ''">$(AssemblyName)</NovolisInnoAppName>
+    <NovolisInnoAppVersion Condition="'$(NovolisInnoAppVersion)' == ''">$(Version)</NovolisInnoAppVersion>
+    <NovolisInnoPublishDir Condition="'$(NovolisInnoPublishDir)' == ''">$(PublishDir)</NovolisInnoPublishDir>
+    <NovolisInnoScriptPath Condition="'$(NovolisInnoScriptPath)' == ''">$(IntermediateOutputPath)game-setup.iss</NovolisInnoScriptPath>
+  </PropertyGroup>
+  <Target Name="NovolisGenerateInnoScript" AfterTargets="Publish">
+    <Message Importance="high" Text="Novolis Inno: set NovolisInnoAppName, NovolisInnoAppVersion, NovolisInnoPublishDir; emit script at $(NovolisInnoScriptPath)" />
+  </Target>
+</Project>

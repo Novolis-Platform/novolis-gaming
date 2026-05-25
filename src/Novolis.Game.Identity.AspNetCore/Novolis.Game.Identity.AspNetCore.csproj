@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Identity.AspNetCore</PackageId>
+    <Description>Map ASP.NET claims to pseudonymous PlayerRef without platform PII storage.</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.Identity.AspNetCore</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
+    <ProjectReference Include="..\Novolis.Game.Identity\Novolis.Game.Identity.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Multiplayer.AspNetCore</PackageId>
+    <Description>SignalR hub bases and DTOs for game lobbies.</Description>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Novolis.Game.Multiplayer.AspNetCore</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
+    <ProjectReference Include="..\Novolis.Game.Identity.AspNetCore\Novolis.Game.Identity.AspNetCore.csproj" />
+    <ProjectReference Include="..\Novolis.Game.Multiplayer.Abstractions\Novolis.Game.Multiplayer.Abstractions.csproj" />
+  </ItemGroup>
+</Project>
