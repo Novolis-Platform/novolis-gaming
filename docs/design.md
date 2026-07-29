@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Libraries used when **creating and shipping** a game: menus, pseudonymous player identity, multiplayer lobby patterns, Windows installer scripts. Not runtime simulation, physics, or rendering.
+Libraries used when **creating and shipping** a game: menus, pseudonymous player identity, multiplayer lobby patterns, player session protocol (tooling wire), Windows installer scripts. Not runtime simulation, physics, or rendering.
 
 ## Non-goals
 
@@ -16,6 +16,7 @@ Libraries used when **creating and shipping** a game: menus, pseudonymous player
 
 | Package | May reference |
 |---------|----------------|
+| `Session` | BCL; MessagePack; `Novolis.Transports.LocalIpc` (framing only — no domain) |
 | `Identity.*` | BCL; abstractions chain |
 | `MenuFlows` | `Identity.Abstractions` |
 | `Multiplayer.*` | `Identity.Abstractions`; AspNetCore → `Microsoft.AspNetCore.App` |

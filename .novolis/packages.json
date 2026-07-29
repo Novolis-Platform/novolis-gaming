@@ -1,5 +1,9 @@
 {
   "packages": {
+    "Novolis.Game.Session": {
+      "project": "src/Novolis.Game.Session/Novolis.Game.Session.csproj",
+      "paths": ["src/Novolis.Game.Session/**"]
+    },
     "Novolis.Game.Identity.Abstractions": {
       "project": "src/Novolis.Game.Identity.Abstractions/Novolis.Game.Identity.Abstractions.csproj",
       "paths": ["src/Novolis.Game.Identity.Abstractions/**"]
