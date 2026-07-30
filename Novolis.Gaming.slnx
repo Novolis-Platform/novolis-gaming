@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Novolis.Game.Procedural/Novolis.Game.Procedural.csproj" />
+    <Project Path="src/Novolis.Game.Humanoid/Novolis.Game.Humanoid.csproj" />
     <Project Path="src/Novolis.Game.Identity.Abstractions/Novolis.Game.Identity.Abstractions.csproj" />
     <Project Path="src/Novolis.Game.Identity/Novolis.Game.Identity.csproj" />
     <Project Path="src/Novolis.Game.Identity.AspNetCore/Novolis.Game.Identity.AspNetCore.csproj" />

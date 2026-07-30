@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Humanoid</PackageId>
+    <IsPackable>true</IsPackable>
+    <Description>Game-facing humanoid clip banks and body masks over Novolis.Simulation.Humanoid.</Description>
+    <RootNamespace>Novolis.Game.Humanoid</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Novolis.Simulation.Humanoid" />
+  </ItemGroup>
+</Project>

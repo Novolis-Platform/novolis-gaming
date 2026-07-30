@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="TUnit" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Novolis.Simulation.Humanoid" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
@@ -16,5 +17,6 @@
     <ProjectReference Include="..\..\src\Novolis.Game.Multiplayer.Abstractions\Novolis.Game.Multiplayer.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Packaging.Inno\Novolis.Game.Packaging.Inno.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Procedural\Novolis.Game.Procedural.csproj" />
+    <ProjectReference Include="..\..\src\Novolis.Game.Humanoid\Novolis.Game.Humanoid.csproj" />
   </ItemGroup>
 </Project>

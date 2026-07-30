@@ -31,6 +31,14 @@
     "Novolis.Game.Packaging.Inno": {
       "project": "src/Novolis.Game.Packaging.Inno/Novolis.Game.Packaging.Inno.csproj",
       "paths": ["src/Novolis.Game.Packaging.Inno/**"]
+    },
+    "Novolis.Game.Procedural": {
+      "project": "src/Novolis.Game.Procedural/Novolis.Game.Procedural.csproj",
+      "paths": ["src/Novolis.Game.Procedural/**"]
+    },
+    "Novolis.Game.Humanoid": {
+      "project": "src/Novolis.Game.Humanoid/Novolis.Game.Humanoid.csproj",
+      "paths": ["src/Novolis.Game.Humanoid/**", "tests/Novolis.Gaming.Unit/Humanoid/**"]
     }
   }
 }
