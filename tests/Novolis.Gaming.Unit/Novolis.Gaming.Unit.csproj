@@ -15,5 +15,6 @@
     <ProjectReference Include="..\..\src\Novolis.Game.MenuFlows\Novolis.Game.MenuFlows.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Multiplayer.Abstractions\Novolis.Game.Multiplayer.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Packaging.Inno\Novolis.Game.Packaging.Inno.csproj" />
+    <ProjectReference Include="..\..\src\Novolis.Game.Procedural\Novolis.Game.Procedural.csproj" />
   </ItemGroup>
 </Project>

@@ -1,14 +1,16 @@
 # novolis-gaming
 
-Game **authoring and shipping** libraries for Novolis: pseudonymous identity, menu flows, multiplayer lobby glue, player session protocol, and Inno Setup packaging helpers.
+Game **authoring and shipping** libraries for Novolis: pseudonymous identity, menu flows, multiplayer lobby glue, procedural content tools, and Inno Setup packaging helpers.
 
 This repo is **not** the simulation/render stack (`novolis-math`, `novolis-simulation`, `novolis-raylib`, `novolis-rendering`). Product games compose those packages with `Novolis.Game.*` at the app layer.
+
+Live control sessions (agent desks / takeovers) are **`Novolis.Agent.Session`** in [`novolis-commands`](https://github.com/Novolis-Platform/novolis-commands).
 
 ## Packages
 
 | Package | Purpose |
 |---------|---------|
-| `Novolis.Game.Session` | Decision-point session protocol (`session.*`) + LocalIpc/stdio hosts |
+| `Novolis.Game.Procedural` | Seeded noise terrain, infinite chunks, runner tracks, spawn tables |
 | `Novolis.Game.Identity.Abstractions` | `PlayerRef`, session/device refs, linker contracts |
 | `Novolis.Game.Identity` | In-memory directory and linker |
 | `Novolis.Game.Identity.AspNetCore` | Claims → `PlayerRef` |
@@ -25,7 +27,7 @@ dotnet build Novolis.Gaming.slnx
 dotnet test tests/Novolis.Gaming.Unit
 ```
 
-See [docs/getting-started.md](docs/getting-started.md), [docs/design.md](docs/design.md), and [docs/session-protocol.md](docs/session-protocol.md).
+See [docs/getting-started.md](docs/getting-started.md) and [docs/design.md](docs/design.md).
 
 ## Policy
 

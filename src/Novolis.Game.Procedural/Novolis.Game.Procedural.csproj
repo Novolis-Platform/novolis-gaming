@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Procedural</PackageId>
+    <IsPackable>true</IsPackable>
+    <Description>Seeded procedural tools for games: noise/FBM terrain, infinite chunk streaming, runner track segments, weighted spawns, difficulty ramps.</Description>
+    <RootNamespace>Novolis.Game.Procedural</RootNamespace>
+  </PropertyGroup>
+</Project>
