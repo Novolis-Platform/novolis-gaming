@@ -45,7 +45,8 @@ public struct SeededRng
     }
 
     /// <summary>Derives a child seed for a stable sub-stream (chunk coords, feature ids).</summary>
-    public static ulong Mix(ulong seed, long a, long b = 0) =>
+    public static ulong Mix(ulong seed, long a, long b = 0)
+    {
         unchecked
         {
             var x = seed ^ ((ulong)a * 0xD6E8FEB86659FD93UL) ^ ((ulong)b * 0xC2B2AE3D27D4EB4FUL);
@@ -54,4 +55,5 @@ public struct SeededRng
             x ^= x >> 33;
             return x == 0 ? 1UL : x;
         }
+    }
 }
