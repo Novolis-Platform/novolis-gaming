@@ -11,15 +11,29 @@ dotnet add package Novolis.Game.Multiplayer.Abstractions
 ## Quick start
 
 ```csharp
+using Novolis.Game.Identity.Abstractions;
+using Novolis.Game.Multiplayer.Abstractions;
+
 var lobby = new InMemoryLobbyState();
 lobby.TryAddPlayer(new LobbyPlayerSlot(PlayerRef.New(), isReady: false));
+lobby.TrySetReady(player, isReady: true);
 ```
 
-## Related packages
+## API
+
+| Type | Role |
+|------|------|
+| `LobbyId` | `New()`, opaque `Value` |
+| `LobbyPlayerSlot` | `Player`, `IsReady` |
+| `ILobbyState` | `Id`, `Players`, `TryAddPlayer`, `TryRemovePlayer`, `TrySetReady` |
+| `InMemoryLobbyState` | In-process `ILobbyState` |
+
+## Related
 
 | Package | When to use |
 |---------|-------------|
 | `Novolis.Game.Multiplayer.AspNetCore` | SignalR hub bases |
+| `Novolis.Game.Identity.Abstractions` | `PlayerRef` for slots |
 
 ## More documentation
 

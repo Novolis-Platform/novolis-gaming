@@ -11,11 +11,21 @@ dotnet add package Novolis.Game.Identity
 ## Quick start
 
 ```csharp
+using Novolis.Game.Identity;
+
 var directory = new InMemoryPlayerDirectory();
 var player = PlayerRefFactory.CreateGuest(directory, "Guest-1");
 ```
 
-## Related packages
+## API
+
+| Type | Role |
+|------|------|
+| `InMemoryPlayerDirectory` | Thread-safe `IPlayerDirectory` |
+| `InMemoryExternalIdentityLinker` | Thread-safe `IExternalIdentityLinker` |
+| `PlayerRefFactory` | `CreateGuest(directory, displayName?)` → `PlayerRef` |
+
+## Related
 
 | Package | When to use |
 |---------|-------------|

@@ -11,10 +11,26 @@ dotnet add package Novolis.Game.Multiplayer.AspNetCore
 ## Quick start
 
 ```csharp
-public sealed class MyLobbyHub : GameLobbyHubBase { /* supply ILobbyState */ }
+using Novolis.Game.Multiplayer.AspNetCore;
+
+public sealed class MyLobbyHub : GameLobbyHubBase
+{
+    protected override ILobbyState GetLobby(LobbyId id) => /* your store */;
+}
 ```
 
-## Related packages
+Clients call `JoinLobbyAsync(lobbyId)` and `SetReadyAsync(lobbyId, isReady)`. The hub resolves the caller's `PlayerRef` from claims.
+
+## API
+
+| Type | Role |
+|------|------|
+| `GameLobbyHubBase` | `JoinLobbyAsync`, `SetReadyAsync`; override `GetLobby`; protected `TryGetCallerPlayer` |
+| `LobbyDto` | Wire DTO: `LobbyId`, `Players` |
+| `LobbyPlayerDto` | `PlayerRef`, `IsReady` |
+| `LobbyMapping` | `ToDto(lobby)`, `TryParsePlayerRef(value, out player)` |
+
+## Related
 
 | Package | When to use |
 |---------|-------------|
