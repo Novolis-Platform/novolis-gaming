@@ -4,7 +4,7 @@ Game **authoring and shipping** libraries for Novolis: pseudonymous identity, me
 
 This repo is **not** the simulation/render stack (`novolis-math`, `novolis-simulation`, `novolis-raylib`, `novolis-rendering`). Product games compose those packages with `Novolis.Game.*` at the app layer.
 
-Live control sessions (agent desks / takeovers) are **`Novolis.Agent.Session`** in [`novolis-commands`](https://github.com/Novolis-Platform/novolis-commands).
+Live agent surfaces are **`Novolis.Agent.Core` / `Novolis.Agent.Surface`** in [`novolis-agent`](https://github.com/Novolis-Platform/novolis-agent).
 
 ## Packages
 
@@ -33,3 +33,4 @@ See [docs/getting-started.md](docs/getting-started.md) and [docs/design.md](docs
 
 - [NuGet-only cross-repo dependencies](https://github.com/Novolis-Platform/novolis-governance/blob/main/docs/nuget-only-policy.md)
 - [Gaming layer policy](https://github.com/Novolis-Platform/novolis-governance/blob/main/docs/gaming-layer-policy.md)
+

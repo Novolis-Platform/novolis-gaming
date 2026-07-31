@@ -11,7 +11,7 @@ Libraries used when **creating and shipping** a game: menus, pseudonymous player
 - No game domain (ships, factions, GalacticSim content)
 - No PII types in public API (email, real name, provider subject strings)
 - No SignalR in `novolis-transports` — game multiplayer lives here
-- No live control session wire — that is `Novolis.Agent.Session` in `novolis-commands`
+- No live agent surface wire — that is `novolis-agent` (`Novolis.Agent.Core` / `.Surface`)
 
 ## Dependency firewall
 
@@ -32,7 +32,7 @@ Libraries used when **creating and shipping** a game: menus, pseudonymous player
 
 | Repo | Role |
 |------|------|
-| `novolis-commands` | Commands + `Novolis.Agent.Session` / `Novolis.Agent.Surface` |
+| `novolis-commands` | Commands (intent) · `novolis-agent` | Agent Surface |
 | `novolis-install` | Novolis platform package installer (`novolis` global tool) |
 | `novolis-templates` | `dotnet new` scaffolds (general + MonoGame) |
 | `novolis-workflows` | Shared GitHub Actions workflows for org CI/CD |
@@ -46,3 +46,4 @@ WorkflowEngine (Cron / Mapping / Messaging orchestration) is a future import int
 - Full Inno compile integration (invoke ISCC)
 - SignalR host migration and production auth samples
 - Dogfood infinite-runner sample using `Novolis.Game.Procedural`
+
