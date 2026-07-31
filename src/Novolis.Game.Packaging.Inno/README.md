@@ -1,26 +1,9 @@
 # Novolis.Game.Packaging.Inno
 
-Generate Inno Setup `.iss` scripts and MSBuild targets for Windows game installers.
+Per-user Inno Setup script generation for Novolis games (same contract as `Novolis.Avalonia.Packaging.Inno`).
 
-## Install
+- `PrivilegesRequired=lowest` → `%LocalAppData%\Programs\…` (no admin)
+- Publisher `Novolis`, URL `https://github.com/Novolis-Platform`
+- Optional MIT `LicenseFile` and `SetupIconFile` / `icon.ico`
 
-```bash
-dotnet add package Novolis.Game.Packaging.Inno
-```
-
-## Quick start
-
-```csharp
-var iss = new InnoScriptGenerator
-{
-    AppName = "MyGame",
-    AppVersion = "1.0.0",
-    PublishDir = @"bin\Release\net10.0\publish\win-x64"
-}.Generate();
-```
-
-Import targets: `<PackageReference Include="Novolis.Game.Packaging.Inno" />` then set `NovolisInnoAppName`, `NovolisInnoPublishDir` before `dotnet publish`.
-
-## More documentation
-
-- [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+Avalonia desktop apps should use `Novolis.Avalonia.Packaging.Inno` instead.
