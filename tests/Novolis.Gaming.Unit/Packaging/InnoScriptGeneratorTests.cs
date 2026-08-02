@@ -27,4 +27,24 @@ public class InnoScriptGeneratorTests
         await Assert.That(script).Contains(@"LicenseFile=C:\repo\LICENSE");
         await Assert.That(script).DoesNotContain("{autopf}");
     }
+
+    [Test]
+    public async Task Generate_Includes_Optional_Urls_And_Icon()
+    {
+        var script = new InnoScriptGenerator
+        {
+            AppName = "OptionalUrls",
+            AppVersion = "2.0.0",
+            PublishDir = @"D:\out",
+            AppExeName = "OptionalUrls.exe",
+            OutputDir = @"D:\out\installer",
+            AppSupportUrl = "https://example.com/support",
+            AppUpdatesUrl = "https://example.com/updates",
+            SetupIconFile = @"D:\assets\icon.ico",
+        }.Generate();
+
+        await Assert.That(script).Contains("AppSupportURL=https://example.com/support");
+        await Assert.That(script).Contains("AppUpdatesURL=https://example.com/updates");
+        await Assert.That(script).Contains(@"SetupIconFile=D:\assets\icon.ico");
+    }
 }

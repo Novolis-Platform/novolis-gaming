@@ -63,4 +63,92 @@ public sealed class ProceduralTests
 
         await Assert.That(hits).IsGreaterThan(40);
     }
+
+    [Test]
+    public async Task WeightedTable_TryPick_Fails_When_Empty()
+    {
+        var table = new WeightedTable<string>();
+        var rng = new SeededRng(1);
+        await Assert.That(table.TryPick(ref rng, out _)).IsFalse();
+    }
+
+    [Test]
+    public async Task WeightedTable_Pick_Throws_When_Empty()
+    {
+        var table = new WeightedTable<string>();
+        var rng = new SeededRng(1);
+        await Assert.ThrowsAsync<InvalidOperationException>(() =>
+        {
+            _ = table.Pick(ref rng);
+            return Task.CompletedTask;
+        });
+    }
+
+    [Test]
+    public async Task NoiseHeightfield_Samples_Finite_Heights()
+    {
+        var field = new NoiseHeightfield(seed: 12, baseHeight: 5f);
+        var height = field.SampleHeight(10f, -3f);
+        await Assert.That(float.IsFinite(height)).IsTrue();
+    }
+
+    [Test]
+    public async Task BiomeSampler_Returns_Stable_Biome()
+    {
+        var first = BiomeSampler.Sample(100f, 200f, worldSeed: 7);
+        var second = BiomeSampler.Sample(100f, 200f, worldSeed: 7);
+        await Assert.That(first).IsEqualTo(second);
+    }
+
+    [Test]
+    public async Task InfiniteTrack_IndexAt_And_High_Difficulty()
+    {
+        var ramp = new DifficultyRamp(startDistance: 0f, fullAtDistance: 100f, ease: 1f);
+        var gen = new InfiniteTrackGenerator(seed: 123, segmentLength: 20f, difficulty: ramp);
+        await Assert.That(gen.SegmentLength).IsEqualTo(20f);
+        await Assert.That(gen.IndexAt(45f)).IsEqualTo(2);
+
+        var segment = gen.Segment(10);
+        await Assert.That(segment.Features.Count).IsGreaterThan(0);
+        await Assert.That(segment.Features.Any(f => f.Kind == TrackFeatureKind.Gate)).IsTrue();
+    }
+
+    [Test]
+    public async Task SeededRng_NextInt_Handles_Equal_Bounds()
+    {
+        var rng = new SeededRng(5L);
+        await Assert.That(rng.NextInt(3, 3)).IsEqualTo(3);
+    }
+
+    [Test]
+    public async Task WeightedTable_Ignores_NonPositive_Weights()
+    {
+        var table = new WeightedTable<string>().Add("skip", 0).Add("only", 1);
+        await Assert.That(table.Count).IsEqualTo(1);
+        var rng = new SeededRng(1);
+        await Assert.That(table.Pick(ref rng)).IsEqualTo("only");
+    }
+
+    [Test]
+    public async Task BiomeSampler_Covers_Multiple_Bands()
+    {
+        var biomes = new HashSet<BiomeKind>();
+        for (var i = 0; i < 400; i++)
+            biomes.Add(BiomeSampler.Sample(i * 17.3f, i * 11.7f, worldSeed: 42));
+        await Assert.That(biomes.Count).IsGreaterThanOrEqualTo(3);
+    }
+
+    [Test]
+    public async Task DifficultyRamp_Returns_Zero_Before_Start()
+    {
+        var ramp = new DifficultyRamp(startDistance: 100f, fullAtDistance: 500f);
+        await Assert.That(ramp.Evaluate(50f)).IsEqualTo(0f);
+    }
+
+    [Test]
+    public async Task Noise_Value1D_Is_Finite()
+    {
+        var value = Noise.Value1D(1.5f, seed: 99);
+        await Assert.That(float.IsFinite(value)).IsTrue();
+    }
 }

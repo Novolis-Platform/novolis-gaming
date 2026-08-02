@@ -17,6 +17,25 @@ public class GameScreenStackTests
         await Assert.That(stack.Current?.ScreenId).IsEqualTo("main");
     }
 
+    [Test]
+    public async Task PopAsync_Returns_False_When_Empty()
+    {
+        var stack = new GameScreenStack();
+        await Assert.That(await stack.PopAsync()).IsFalse();
+    }
+
+    [Test]
+    public async Task PushAsync_Raises_Transitioned()
+    {
+        var stack = new GameScreenStack();
+        GameScreenTransition? transition = null;
+        stack.Transitioned += t => transition = t;
+        await stack.PushAsync(new TestScreen("main"));
+        await stack.PushAsync(new TestScreen("settings"));
+        await Assert.That(transition?.FromScreenId).IsEqualTo("main");
+        await Assert.That(transition?.ToScreenId).IsEqualTo("settings");
+    }
+
     private sealed class TestScreen(string id) : IGameScreen
     {
         public string ScreenId => id;
