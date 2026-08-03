@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Procedural
 
 Seeded procedural tools for game authoring: noise terrain, real-time infinite chunks, infinite-runner tracks, weighted spawns, difficulty ramps.
@@ -46,3 +54,4 @@ var seg = track.Segment(track.IndexAt(playerX));
 ## Policy
 
 Stays inside [gaming-layer-policy](https://github.com/Novolis-Platform/novolis-governance/blob/main/docs/gaming-layer-policy.md): authoring helpers only, no sim/render wiring.
+

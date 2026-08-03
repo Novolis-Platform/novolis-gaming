@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Identity.Abstractions
 
 Pseudonymous identity primitives for games: opaque `PlayerRef`, session/device refs, and linker contracts without PII in the platform surface.
@@ -42,3 +50,4 @@ directory.SetDisplayName(player, "Guest-42"); // display names live in your app 
 ## More documentation
 
 - [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+

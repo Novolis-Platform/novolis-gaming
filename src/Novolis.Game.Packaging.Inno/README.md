@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Packaging.Inno
 
 Per-user Inno Setup script generation for Novolis games — same contract as `Novolis.Avalonia.Packaging.Inno`.
@@ -42,3 +50,4 @@ MSBuild target `NovolisGenerateInnoScript` is available via `Novolis.Game.Packag
 | Package | When to use |
 |---------|-------------|
 | `Novolis.Avalonia.Packaging.Inno` | Avalonia desktop app installers |
+

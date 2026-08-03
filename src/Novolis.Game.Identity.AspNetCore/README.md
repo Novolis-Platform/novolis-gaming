@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Identity.AspNetCore
 
 Bridge ASP.NET `ClaimsPrincipal` to `PlayerRef`. Does not configure Identity Server or persist users.
@@ -36,3 +44,4 @@ var claim = player.ToPlayerRefClaim();
 ## More documentation
 
 - [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+

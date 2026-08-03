@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Multiplayer.AspNetCore
 
 SignalR hub base and lobby DTO mapping for ASP.NET game servers.
@@ -40,3 +48,4 @@ Clients call `JoinLobbyAsync(lobbyId)` and `SetReadyAsync(lobbyId, isReady)`. Th
 ## More documentation
 
 - [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+

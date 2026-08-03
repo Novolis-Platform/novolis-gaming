@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Multiplayer.Abstractions
 
 Lobby identifiers and in-memory lobby state using `PlayerRef` slots.
@@ -38,3 +46,4 @@ lobby.TrySetReady(player, isReady: true);
 ## More documentation
 
 - [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+

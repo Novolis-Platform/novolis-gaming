@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Identity
 
 In-memory implementations of `IPlayerDirectory` and `IExternalIdentityLinker` for local games and tests.
@@ -35,3 +43,4 @@ var player = PlayerRefFactory.CreateGuest(directory, "Guest-1");
 ## More documentation
 
 - [Design](https://github.com/Novolis-Platform/novolis-gaming/blob/main/docs/design.md)
+

@@ -1,3 +1,11 @@
+<!-- novolis-pkg-brand:start -->
+<p align="center">
+  <a href="https://github.com/Novolis-Platform/novolis-gaming">
+    <img src="https://raw.githubusercontent.com/Novolis-Platform/.github/main/brand/logo-icon.svg" width="72" alt="Novolis"/>
+  </a>
+</p>
+<!-- novolis-pkg-brand:end -->
+
 # Novolis.Game.Humanoid
 
 Game-facing clip banks and body masks. The skeleton schema lives in `Novolis.Simulation.Humanoid`.
@@ -38,3 +46,4 @@ HumanoidBodyMask.ApplyMasked(locomotionPose, attackPose, layered, HumanoidBodyMa
 |---------|-------------|
 | `Novolis.Simulation.Humanoid` | `HumanoidPose`, `HumanoidAnimationClip`, `HumanoidBindPose` |
 | `Novolis.Simulation.Humanoid.Import` | BVH/glTF clip import |
+
