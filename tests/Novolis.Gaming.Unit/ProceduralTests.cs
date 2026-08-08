@@ -73,6 +73,15 @@ public sealed class ProceduralTests
     }
 
     [Test]
+    public async Task WeightedTable_TryPick_Succeeds_When_Populated()
+    {
+        var table = new WeightedTable<string>().Add("only", 1);
+        var rng = new SeededRng(7);
+        await Assert.That(table.TryPick(ref rng, out var item)).IsTrue();
+        await Assert.That(item).IsEqualTo("only");
+    }
+
+    [Test]
     public async Task WeightedTable_Pick_Throws_When_Empty()
     {
         var table = new WeightedTable<string>();
@@ -127,6 +136,26 @@ public sealed class ProceduralTests
         await Assert.That(table.Count).IsEqualTo(1);
         var rng = new SeededRng(1);
         await Assert.That(table.Pick(ref rng)).IsEqualTo("only");
+    }
+
+    [Test]
+    public async Task WeightedTable_Fallthrough_Returns_Last_Entry()
+    {
+        // Many equal weights exercise the accumulator loop; last entry remains reachable.
+        var table = new WeightedTable<string>()
+            .Add("a", 1f)
+            .Add("b", 1f)
+            .Add("c", 1f);
+        var counts = new Dictionary<string, int>(StringComparer.Ordinal);
+        for (ulong seed = 1; seed <= 300; seed++)
+        {
+            var rng = new SeededRng(seed);
+            var item = table.Pick(ref rng);
+            counts[item] = counts.GetValueOrDefault(item) + 1;
+        }
+
+        await Assert.That(counts.ContainsKey("a")).IsTrue();
+        await Assert.That(counts.ContainsKey("c")).IsTrue();
     }
 
     [Test]
