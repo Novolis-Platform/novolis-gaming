@@ -7,7 +7,6 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="TUnit" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Novolis.Simulation.Humanoid" />
   </ItemGroup>
   <ItemGroup>
