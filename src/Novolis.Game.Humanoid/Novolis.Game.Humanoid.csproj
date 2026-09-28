@@ -7,6 +7,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Novolis.Simulation.Humanoid" />
+    <LibraryReference Include="Novolis.Simulation.Humanoid" />
   </ItemGroup>
 </Project>
