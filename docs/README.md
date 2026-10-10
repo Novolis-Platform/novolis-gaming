@@ -1,6 +1,6 @@
 # novolis-gaming documentation
 
-Game identity, humanoids, menu flows, packaging — no Avalonia in this layer.
+Game scenes, identity, humanoids, menu flows, packaging — sits on Sim and Render; no host frameworks.
 
 Published docs: [https://novolis-platform.github.io/.github/novolis-gaming/](https://novolis-platform.github.io/.github/novolis-gaming/)
 
@@ -21,6 +21,7 @@ Published docs: [https://novolis-platform.github.io/.github/novolis-gaming/](htt
 | `Novolis.Game.Identity.Abstractions` |
 | `Novolis.Game.Identity.AspNetCore` |
 | `Novolis.Game.MenuFlows` |
+| `Novolis.Game.Scenes` |
 | `Novolis.Game.Multiplayer.Abstractions` |
 | `Novolis.Game.Multiplayer.AspNetCore` |
 | `Novolis.Game.Packaging.Inno` |

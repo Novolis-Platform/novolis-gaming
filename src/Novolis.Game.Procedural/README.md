@@ -42,7 +42,7 @@ var seg = track.Segment(track.IndexAt(playerX));
 |------|------|
 | `SeededRng` | Deterministic PRNG + `Mix` for sub-streams |
 | `Noise` | Value noise + FBM |
-| `NoiseHeightfield` / `IHeightSampler` | Terrain heights |
+| `NoiseHeightfield` | Terrain heights (`SampleHeight`) |
 | `InfiniteChunkStream` | Sliding chunk window (load/unload events) |
 | `InfiniteTrackGenerator` | Runner segments (platforms, gaps, hazards…) |
 | `DifficultyRamp` | Distance → intensity |

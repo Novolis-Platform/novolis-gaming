@@ -50,15 +50,16 @@
 | `Novolis.Game.Multiplayer.AspNetCore` | `dotnet add package Novolis.Game.Multiplayer.AspNetCore` | [README](https://github.com/Novolis-Platform/novolis-gaming/blob/main/src/Novolis.Game.Multiplayer.AspNetCore/README.md) |
 | `Novolis.Game.Packaging.Inno` | `dotnet add package Novolis.Game.Packaging.Inno` | [README](https://github.com/Novolis-Platform/novolis-gaming/blob/main/src/Novolis.Game.Packaging.Inno/README.md) |
 | `Novolis.Game.Procedural` | `dotnet add package Novolis.Game.Procedural` | [README](https://github.com/Novolis-Platform/novolis-gaming/blob/main/src/Novolis.Game.Procedural/README.md) |
+| `Novolis.Game.Scenes` | `dotnet add package Novolis.Game.Scenes` | [README](https://github.com/Novolis-Platform/novolis-gaming/blob/main/src/Novolis.Game.Scenes/README.md) |
 
 For NuGet.org and Visual Studio, the **embedded** README.md inside each package is authoritative.
 
 <!-- novolis-package-index:end -->
 # novolis-gaming
 
-Game **authoring and shipping** libraries for Novolis: pseudonymous identity, menu flows, multiplayer lobby glue, procedural content tools, and Inno Setup packaging helpers.
+Game **authoring and shipping** libraries for Novolis: scenes, identity, menu flows, multiplayer lobby glue, procedural content tools, and Inno Setup packaging helpers.
 
-This repo is **not** the simulation/render stack (`novolis-math`, `novolis-simulation`, `novolis-raylib`, `novolis-rendering`). Product games compose those packages with `Novolis.Game.*` at the app layer.
+Sits on Simulation and Rendering. Product games take `Novolis.Game.*` plus a host (Silk, Avalonia, MAUI, Web) — not Math/Presentation/Appearance islands.
 
 Live agent surfaces are **`Novolis.Agent.Core` / `Novolis.Agent.Surface`** in [`novolis-agent`](https://github.com/Novolis-Platform/novolis-agent).
 
@@ -70,6 +71,7 @@ Live agent surfaces are **`Novolis.Agent.Core` / `Novolis.Agent.Surface`** in [`
 | `Novolis.Game.Identity.Abstractions` | `PlayerRef`, session/device refs, linker contracts |
 | `Novolis.Game.Identity` | In-memory directory and linker |
 | `Novolis.Game.Identity.AspNetCore` | Claims → `PlayerRef` |
+| `Novolis.Game.Scenes` | Host-agnostic scene helpers over Rendering |
 | `Novolis.Game.MenuFlows` | Screen stack navigation |
 | `Novolis.Game.Multiplayer.Abstractions` | Lobby state |
 | `Novolis.Game.Multiplayer.AspNetCore` | SignalR hub base |

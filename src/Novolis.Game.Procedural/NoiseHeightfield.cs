@@ -1,7 +1,7 @@
 ﻿namespace Novolis.Game.Procedural;
 
 /// <summary>FBM heightfield with configurable scale and amplitude.</summary>
-public sealed class NoiseHeightfield : IHeightSampler
+public sealed class NoiseHeightfield
 {
     readonly ulong _seed;
     readonly float _frequency;
@@ -28,7 +28,7 @@ public sealed class NoiseHeightfield : IHeightSampler
         _octaves = Math.Clamp(octaves, 1, 12);
     }
 
-    /// <inheritdoc />
+    /// <summary>World-space height at (<paramref name="x"/>, <paramref name="z"/>).</summary>
     public float SampleHeight(float x, float z) =>
         _baseHeight + Noise.Fbm2D(x * _frequency, z * _frequency, _seed, _octaves) * _amplitude;
 }

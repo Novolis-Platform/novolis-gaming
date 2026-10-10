@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Game.Scenes</PackageId>
+    <IsPackable>true</IsPackable>
+    <Description>Host-agnostic game scene helpers over Rendering. Games take this plus a host (Silk, Avalonia, MAUI, Web).</Description>
+    <RootNamespace>Novolis.Game.Scenes</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <LibraryReference Include="Novolis.Math.Arrays" />
+    <LibraryReference Include="Novolis.Math.Geometry" />
+    <LibraryReference Include="Novolis.Math.Topology" />
+    <LibraryReference Include="Novolis.Rendering.Appearance" />
+    <LibraryReference Include="Novolis.Rendering.Presentation.Abstractions" />
+    <LibraryReference Include="Novolis.Rendering.Planar" />
+  </ItemGroup>
+</Project>

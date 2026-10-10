@@ -19,5 +19,6 @@
     <ProjectReference Include="..\..\src\Novolis.Game.Packaging.Inno\Novolis.Game.Packaging.Inno.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Procedural\Novolis.Game.Procedural.csproj" />
     <ProjectReference Include="..\..\src\Novolis.Game.Humanoid\Novolis.Game.Humanoid.csproj" />
+    <ProjectReference Include="..\..\src\Novolis.Game.Scenes\Novolis.Game.Scenes.csproj" />
   </ItemGroup>
 </Project>
