@@ -6,7 +6,6 @@
     <RootNamespace>Novolis.Game.Identity.AspNetCore</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <ProjectReference Include="..\Novolis.Game.Identity.Abstractions\Novolis.Game.Identity.Abstractions.csproj" />
     <ProjectReference Include="..\Novolis.Game.Identity\Novolis.Game.Identity.csproj" />
   </ItemGroup>
